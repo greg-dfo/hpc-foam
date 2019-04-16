@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+pwd
+
 touch prep1.garb
 sudo touch prep2.garb
 

@@ -5,3 +5,7 @@
 #For more details of MPI/RDMA, visit: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/rdma-cluster
 
 touch ~/prep1.garb
+
+
+# Exit code 0 indicates success to Azure Batch
+exit 0

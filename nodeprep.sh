@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-#Command script to run pingpong performance testing on multiple machines as MPI task on Azure Batch.
-#Usage: application-cmd [nodes]
+touch /volatile/prep1.garb
 
-#For more details of MPI/RDMA, visit: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/rdma-cluster
-
-touch ~/prep1.garb
+/bin/sh -c "yum install -y kernel-headers --disableexcludes=all; yum -y install make gcc gcc-c++ gcc-gfortran cmake zlib-devel openmpi openmpi-devel fftw fftw-devel gsl gsl-devel gmp environment-modules; source /etc/profile.d/modules.sh; module add mpi/openmpi-$(uname -i); module load mpi/openmpi-$(uname -i)"
 
 
 # Exit code 0 indicates success to Azure Batch
